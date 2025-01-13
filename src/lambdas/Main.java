@@ -8,6 +8,7 @@ Reference: https://dev.java/learn/lambdas/
 
 import java.util.List;
 import java.util.function.Consumer;
+import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Main {
@@ -33,7 +34,6 @@ public class Main {
     When a thread is started by the object of any class which is implementing Runnable,
     then it invokes the run method in the separately executing thread.
      */
-
     static Runnable runnable = () -> System.out.println("Runnable called!");
 
     public static void main(String[] args) {
@@ -47,6 +47,5 @@ public class Main {
 
         //To call a runnable, use the run() method.
         runnable.run();
-
     }
 }
