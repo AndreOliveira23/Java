@@ -1,10 +1,12 @@
 
+import lambdas.Exercises;
 import org.junit.jupiter.api.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 
 import java.util.List;
+import java.util.function.BooleanSupplier;
 
 import static lambdas.Exercises.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -109,6 +111,57 @@ public class LambdasExercisesTest {
         assertEquals(125,findMax.apply(List.of(1,4,3,17,28,125,124,123)));
         assertEquals(484,findMax.apply(List.of(1,484,3,2,10,15,20)));
         assertEquals(43,findMax.apply(List.of(1,43,42,40,36,37)));
-
     }
+
+
+    @Test
+    void findMinTest(){
+        assertEquals(1,findMin.apply(List.of(1,4,3)));
+        assertEquals(30,findMin.apply(List.of(123,47,30)));
+        assertEquals(140,findMin.apply(List.of(140,456,320)));
+        assertEquals(1,findMin.apply(List.of(1,4,3,123,5,1,5,789,780)));
+        assertEquals(1,findMin.apply(List.of(1,4,3,17,28,125,124,123)));
+        assertEquals(1,findMin.apply(List.of(1,484,3,2,10,15,20)));
+        assertEquals(1,findMin.apply(List.of(1,43,42,40,36,37)));
+    }
+
+    @Test
+    void multiplyAllTest(){
+        assertEquals(20,multiplyAll.apply(List.of(5,4)));
+        //TODO
+    }
+
+    @Test
+    void suMAllTest(){
+        assertEquals(9,sumAll.apply(List.of(5,4)));
+        //TODO
+    }
+
+    @Test
+    void sumOfSquareOfAllOdsTest(){
+        //1² + 3³ + 5² + 7² + 9²
+        assertEquals(165,sumOfSquareOfAllOds.apply(List.of(1,2,3,4,5,6,7,8,9)));
+
+        //TODO
+    }
+
+    @Test
+    void sumOfSquareOfAllEvenTest(){
+        //2² + 4² + 6² + 8²
+        assertEquals(120,sumOfSquareOfAllEven.apply(List.of(1,2,3,4,5,6,7,8,9)));
+
+        //TODO
+    }
+
+    @Test
+    void countWordsTest(){
+        assertEquals(5, countWords.apply("Esta string possui cinco palavras"));
+        assertEquals(15, countWords.apply("Write a Java program to implement a lambda expression to count words in a sentence."));
+    }
+
+    @Test
+    void checkContainsTest(){
+        assertTrue(checkIfListContainWord.test(List.of("Teste","de","Lista","De","Strings"),"De"));
+    }
+
 }
