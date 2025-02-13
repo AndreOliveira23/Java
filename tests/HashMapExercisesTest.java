@@ -1,10 +1,8 @@
-import collections.HashMapExercises;
 import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static collections.HashMapExercises.copyGenericMap;
 import static collections.HashMapExercises.copyMap;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -23,8 +21,7 @@ public class HashMapExercisesTest {
         Map<Object,Object> map2 = new HashMap<>();
         Map<Object,Object> map3 = new HashMap<>();
 
-        copyMap.accept(map,map2);//Testing implementation 1
-        copyGenericMap(map,map3);//Testing implementation 2
+        copyMap(map,map3);
 
        assertEquals(map,map2);
        assertEquals(map,map3);

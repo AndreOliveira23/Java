@@ -10,8 +10,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static exceptionHandling.Exercises.*;
-
+import static exception.handling.Exercises.*;
 
 public class ExceptionHandlingTest {
     private static int COUNT = 1;
