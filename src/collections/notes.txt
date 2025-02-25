@@ -1,0 +1,58 @@
+//The Collections Framework is a set of interfaces that models different way of storing data in different types of containers
+
+    THE COLLECTION HIERARCHY
+    |->Iterable -> Iterable: Super interface of Collection. Implement Iterable = being able to iterate over. Not considered part of the Collections Framework
+          |
+          |
+         Collection
+               |
+               |->List -> Have index for added elements
+               |   |----->ArrayList = Resizable-array implementation of List interface
+               |   |
+               |   |----->LinkedList = doubly linked list implementation
+               |             [NOTE: Despite the name (and the description in the javadocs),
+               |             this implementation does not provide methods such as 'next()' or
+               |             'previous()'. In order to get the next or previous element of a
+               |             given index, one option is by using 'get(i+1) / get(i-1),
+               |             or using an iterator, which does provide such methods].
+               |
+               |->Set -> Does not have index(or any particular order), and does not have duplicates
+               |    |
+               |    |----->SortedSet = Set that order its elements using their natural ordering or provided comparator
+               |    |          |
+               |    |          |->Navigable Set = Implements SortedSet, adding the possibility of iterate in descending order
+               |    |                  |
+               |    |                  |->TreeSet = implementation of NavigableSet.
+               |    |
+               |    |----->HashSet = Implemented as a Hashtable
+               |    |
+               |    |----->LinkedHashSet = Implemented as Hashtable + LinkedList
+               |    |
+               |    |----->TreeSet = Order elements by their natural order / specified comparator
+               |    |
+               |    |
+               |->Queue -> Designed for holding elements prior to processing
+                   |
+                   |->PriorityQueue = Elements ordered based on natural order.
+                   |
+                   |->Deque = Double-ended queue
+                       |
+                       |->ArrayDeque = Resizable-array implementation of Deque. Faster than stack and LinkedList (when used as stack / queue, respectively)
+
+    THE MAP HIERARCHY
+    |->Map -> Stores key-value pairs.
+        |        From a technical POV, as the Collection Interface is the root interface for collections and the Map interface
+        |        is the root interface for maps, there's no direct relationship between interfaces related to collections and related to map
+        |        but, the java tutorial at dev.java/learn brings them altogether probably due to the fact that they all serve to store and access data
+        |
+        |
+        |->HashMap = Implemented as a Hashtable. Does not guarantee the order of the map.
+        |
+        |
+        |->LinkedHashMap = Implemented as a HashTable + LinkedList. Defines the order of iteration as the order of insertion.
+        |
+        |
+        |->SortedMap
+               |
+               |
+               |->TreeMap = Sorts the elements according to their natural order / specified comparator.
