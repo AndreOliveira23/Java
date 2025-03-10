@@ -2,6 +2,7 @@ package lambdas;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.OptionalDouble;
 import java.util.function.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -28,6 +29,8 @@ public class Exercises {
         list.forEach(num -> sum[0] += num);
         return sum[0] / list.size();
     };
+
+    public static Function<List<Double>, OptionalDouble> findAvg2 = (list) -> list.stream().mapToDouble(e -> e).average();
 
     public static Function<List<Integer>, List<Integer>> removeDuplicates = (list) -> list.stream().distinct().collect(Collectors.toList());
 

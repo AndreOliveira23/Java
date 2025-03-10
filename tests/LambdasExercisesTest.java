@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 
 
 import java.util.List;
+import java.util.OptionalDouble;
 
 import static lambdas.Exercises.*;
 import static org.junit.jupiter.api.Assertions.*;
@@ -53,6 +54,8 @@ public class LambdasExercisesTest {
     void findAvgTest(){
         List<Double> input = List.of(5.0,5.2,4.3,4.90);
         assertEquals(4.85,findAvg.apply(input));
+        OptionalDouble o = findAvg2.apply(input);
+        assertEquals(4.85,o.getAsDouble());
     }
 
     @Test
