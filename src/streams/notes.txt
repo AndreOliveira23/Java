@@ -1,0 +1,19 @@
+The Stream API is about providing an implementation of the map-filter-reduce algorithm to the JDK.
+
+The Collections API stores and organize the data in the JVM memory, while the Stream API process this data in a
+very efficient way
+
+Two of the goals of the Stream API are to enable you to create more readable and expressive code and to give the
+Java runtime some wiggle room to optimize your computations.
+
+
+//THE MAP-FILTER-REDUCE ALGORITHM
+
+Map step = transforming objects into another values.
+Filter = Taking into account, only the objects that matches some criteria
+Reduce = getting individual amounts into one amount;
+
+
+A Stream is an object that references a sequence of another objects of the same type
+
+
