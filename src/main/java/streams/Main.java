@@ -2,10 +2,6 @@ package streams;
 
 import java.util.List;
 
-import lambdas.Exercises.*;
-
-import static lambdas.Exercises.filterEven;
-
 public class Main {
     record Car(String type, String make, String model, Integer engineCapacity) {}
 

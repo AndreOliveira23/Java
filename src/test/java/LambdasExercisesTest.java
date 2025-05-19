@@ -1,8 +1,4 @@
-
 import org.junit.jupiter.api.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 
 import java.util.List;
 import java.util.OptionalDouble;
@@ -10,9 +6,8 @@ import java.util.OptionalDouble;
 import static lambdas.Exercises.*;
 import static org.junit.jupiter.api.Assertions.*;
 
-public class LambdasExercisesTest {
 
-    Logger log = LoggerFactory.getLogger(LambdasExercisesTest.class);
+public class LambdasExercisesTest {
 
     @Test
     void sumTwoIntegersTest(){

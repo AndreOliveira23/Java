@@ -8,9 +8,10 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.List;
 
+
+import static exception.handling.Exercises.*;
 import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
 import static org.junit.jupiter.api.Assertions.assertThrows;
-import static exception.handling.Exercises.*;
 
 public class ExceptionHandlingTest {
     private static int COUNT = 1;
@@ -36,19 +37,19 @@ public class ExceptionHandlingTest {
     @Test
     void exceptionIfFileNotFoundTest() {
         log.info("Running test 1");
-        assertDoesNotThrow(() -> exceptionIfFileNotFound(Path.of("src/exceptionHandling/input.txt")));
+        assertDoesNotThrow(() -> exceptionIfFileNotFound(Path.of("src/main/java/exception/handling/input.txt")));
 
         log.info("Running test 2");
-        assertThrows(IOException.class,() -> exceptionIfFileNotFound(Path.of("src/exceptionHandling/nonExistentFile.txt")));
+        assertThrows(IOException.class,() -> exceptionIfFileNotFound(Path.of("src/exception/handling/nonExistentFile.txt")));
     }
 
     @Test
     void exceptionIfNumberIsPositiveTest() {
         log.info("Running test 1");
-        assertDoesNotThrow(() -> exceptionIfNumberIsPositive(Path.of("src/exceptionHandling/inputAllNegatives.txt")));
+        assertDoesNotThrow(() -> exceptionIfNumberIsPositive(Path.of("src/main/java/exception/handling/inputAllNegatives.txt")));
 
         log.info("Running test 2");
-        assertThrows(IOException.class,() -> exceptionIfNumberIsPositive(Path.of("src/exceptionHandling/input.txt")));
+        assertThrows(IOException.class,() -> exceptionIfNumberIsPositive(Path.of("src/main/java/exception/handling/input.txt")));
     }
 
     @Test

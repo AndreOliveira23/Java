@@ -1,3 +1,8 @@
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
@@ -9,8 +14,6 @@ import java.util.stream.Collectors;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-import org.junit.jupiter.api.*;
-
 /**
  * This set of exercises is about lambdas and method references. You will write a lambda or method
  * reference corresponding to each of several different functional interfaces. Each exercise is
@@ -21,7 +24,7 @@ import org.junit.jupiter.api.*;
  * <a href="https://github.com/ZahidFKhan/Streams-API-Practices">Streams-API-Practices repository by @ZahidFKhan</a>
  */
 
-class StreamExercisesTest {
+public class StreamExercisesTest {
 
     /**
      * Write a lambda expression that is a predicate that tests whether a string is longer than four
@@ -838,7 +841,7 @@ class StreamExercisesTest {
 
     @BeforeEach
     public void z_setUpBufferedReader() throws IOException {
-        reader = Files.newBufferedReader(Paths.get("tests/SonnetI.txt"), StandardCharsets.UTF_8);
+        reader = Files.newBufferedReader(Paths.get("src/test/java/SonnetI.txt"), StandardCharsets.UTF_8);
     }
 
     @AfterEach

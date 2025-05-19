@@ -21,6 +21,7 @@ public class HashMapExercisesTest {
         Map<Object,Object> map2 = new HashMap<>();
         Map<Object,Object> map3 = new HashMap<>();
 
+        copyMap(map,map2);
         copyMap(map,map3);
 
        assertEquals(map,map2);
