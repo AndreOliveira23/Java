@@ -39,9 +39,7 @@ public class Exercises {
 
 
     public static Predicate<Integer> isPrime = (n) -> {
-        if (n < 1) return false;
-        if (n == 2) return true;
-        return IntStream.rangeClosed(2, (int) Math.sqrt(n)).noneMatch(i -> n % i == 0);
+        return (n > 1) && IntStream.rangeClosed(2, (int) Math.sqrt(n)).noneMatch(i -> n % i == 0);
     };
 
 

@@ -89,6 +89,7 @@ public class LambdasExercisesTest {
         assertFalse(isPrime.test(6));
         assertTrue(isPrime.test(97));
         assertFalse(isPrime.test(-7));
+        assertFalse(isPrime.test(1));
     }
 
     @Test
